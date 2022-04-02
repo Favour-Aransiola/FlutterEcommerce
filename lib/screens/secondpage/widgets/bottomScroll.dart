@@ -5,13 +5,10 @@ class BottomScroll extends StatefulWidget {
  BottomScroll({this.activeIndex});
 
   @override
-  State<BottomScroll> createState() => BottomScrollState(index: activeIndex);
+  State<BottomScroll> createState() => BottomScrollState();
 }
 
 class BottomScrollState extends State<BottomScroll> {
-  int? index;
-  BottomScrollState({this.index});
-  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,12 +21,12 @@ class BottomScrollState extends State<BottomScroll> {
         Container(
           width: 10,
           height:10,
-          decoration: BoxDecoration(shape: BoxShape.circle, color: index==0?Colors.amber:Colors.grey.withOpacity(0.4)),
+          decoration: BoxDecoration(shape: BoxShape.circle, color: widget.activeIndex ==0?Colors.amber:Colors.grey.withOpacity(0.4)),
         ),
         Container(
           width: 10,
           height:10,
-          decoration: BoxDecoration(shape: BoxShape.circle, color: index==1?Colors.amber:Colors.grey.withOpacity(0.4)),
+          decoration: BoxDecoration(shape: BoxShape.circle, color: widget.activeIndex ==1?Colors.amber:Colors.grey.withOpacity(0.4)),
         ),
         
       ],)

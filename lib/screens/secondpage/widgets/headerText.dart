@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/Http/httpget.dart';
 import 'package:flutter_application_3/screens/home/widget/favourite.dart';
 import 'package:flutter_application_3/screens/home/widget/models/arrival.dart';
 
 class HeaderText extends StatefulWidget {
-  Arrivals? recieved;
+  HttpGet? recieved;
   HeaderText({Key? key, this.recieved}) : super(key: key);
 
   @override
-  State<HeaderText> createState() => HeaderTextState(recieved);
+  State<HeaderText> createState() => HeaderTextState();
 }
 
 class HeaderTextState extends State<HeaderText> {
-  Arrivals? recieved;
-  HeaderTextState(this.recieved);
+  
+  HeaderTextState();
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        Text('${recieved!.name}', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+        Text('${widget.recieved!.name}', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
         Favourite(size: 40,)
       ],),
       SizedBox(height:2),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/Http/httpget.dart';
 import 'package:flutter_application_3/screens/home/widget/models/arrival.dart';
 
 class SecondCustomBottomNav extends StatelessWidget {
-  Arrivals? recieved;
+  HttpGet? recieved;
   SecondCustomBottomNav({Key? key, this.recieved} ) : super(key: key);
 
   @override

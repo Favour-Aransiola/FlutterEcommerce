@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/Http/httpget.dart';
 import 'package:flutter_application_3/screens/home/widget/models/arrival.dart';
 import 'package:flutter_application_3/screens/secondpage/widgets/bodyText.dart';
 import 'package:flutter_application_3/screens/secondpage/widgets/bottomScroll.dart';
@@ -10,7 +11,7 @@ import 'package:flutter_application_3/screens/secondpage/widgets/size.dart';
 
 
 class SecondPage extends StatefulWidget {
-  Arrivals? recieved;
+  HttpGet? recieved;
   SecondPage({Key? key, required this.recieved}) : super(key: key);
   
   
@@ -19,7 +20,7 @@ class SecondPage extends StatefulWidget {
   }
   }
 class SecondPageState extends State<SecondPage>{
-    Arrivals? recieved; 
+    HttpGet? recieved; 
     SecondPageState(this.recieved);
   int activeIndex = 0;
   void changeDot(){
@@ -79,7 +80,7 @@ class SecondPageState extends State<SecondPage>{
                           height: 550,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(image: AssetImage('${caro[index]}'), fit:BoxFit.cover)
+                            image: DecorationImage(image: AssetImage('${recieved!.img}'), fit:BoxFit.cover)
                           ),
                         );
                       }, 
