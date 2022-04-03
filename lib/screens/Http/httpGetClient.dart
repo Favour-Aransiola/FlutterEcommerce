@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class HttpGetClient{
   
   Future<List<HttpGet>> fetchFromNet()async{
-    var url = Uri.parse('http://10.0.2.2:5000');
+    var url = Uri.parse('https://my-flutter-server.herokuapp.com/');
     var response = await http.get(url);
     if (response.statusCode==200){
       var data = jsonDecode(response.body);
